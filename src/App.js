@@ -1,24 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+  import Bmfive from './component/bmfive'
+ import Max from './component/max10000'
+import StartM from './component/startM'
+import Bmwaudimer from './component/bmwaudimer';
+import Toptencities from './component/toptenciti';
+import { BrowserRouter , Routes , Route } from 'react-router-dom'
+import Listalldata from './component/listalldata'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   
+      <BrowserRouter>
+      <h1 className='App'> Assignment</h1>
+      <h3 className='App'> Clicked the below Linked to show give data </h3>
+        <Routes>
+          <Route path='/' element={<Listalldata />} />
+          <Route path='/startm' element={<StartM />} />
+          <Route path='/max' element={<Max />} />
+          <Route path='/toptencities' element={<Toptencities />} />
+          <Route path='/bmwaudimer' element={<Bmwaudimer />} />
+          <Route path='/bmfive' element={<Bmfive />} />
+        </Routes>
+      </BrowserRouter>
+
   );
 }
 
